@@ -11,14 +11,7 @@ import * as Icons from "@mui/icons-material";
 import { TransactionDto } from '@/common/dto/transaction.dto';
 import RecentTransactionList from '@/components/RecentTransactionList';
 import DynamicIcon from '@/components/DynamicIcon';
-
-const formatTodayDate = () => {
-  const today = new Date();
-  const year = today.getFullYear();
-  const month = String(today.getMonth() + 1).padStart(2, '0');
-  const day = String(today.getDate()).padStart(2, '0');
-  return `${year}-${month}-${day}`;
-};
+import formatTodayDate from '@/utils/date';
 
 export default function AddTransaction() {
   const [tab, setTab] = useState<number>(0);
